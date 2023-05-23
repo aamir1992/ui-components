@@ -1,0 +1,65 @@
+.swiper-eight {
+    .mySwiperEight {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+  
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: $gray-800;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* height: 400px; */
+        transition:all 0.3s linear;
+        transform: scale(0.8);
+
+        &.swiper-slide-active{
+            transform: scale(1);
+        }
+      }
+  
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .swiper-button-prev-custom, .swiper-button-next-custom {
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 100;
+        cursor: none;
+      }
+
+      .swiper-button-prev-custom {
+        left: 0;
+      }
+      .swiper-button-next-custom {
+        right: 0;
+      }
+
+      .arrow{
+        pointer-events: none;
+        backface-visibility: hidden;
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        z-index: 101;
+        top: 0;
+        left: 0;
+        opacity:0;
+        box-shadow: 0 0 5px $gray-800;
+        background-color: $white;
+        padding: 10px 10px;
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center;
+        background-image:url('/src/images/arrow-up.png');
+    }
+}

@@ -1,0 +1,35 @@
+---
+import data from "../../data/card.js";
+---
+
+<section class="section--pad">
+  <div class="container">
+    <!-- Card Type 10 -->
+    <div class="row mb-60">
+      {
+        data.slice(0, 2).map((input, index) => {
+          return (
+            <div class="col-sm-6">
+              <div class="card card--10">
+                <div class="card__imgsec">
+                  <img src={input.img} alt="" />
+                </div>
+                <div class="card__content">
+                  <h3>{input.title}</h3>
+                  <h5>{input.category}</h5>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                    sed in nisi sunt perspiciatis debitis, incidunt aut laborum
+                    aliquid laboriosam!
+                  </p>
+                  <p class="date">Jan 01 2023</p>
+                </div>
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+    <!--  -->
+  </div>
+</section>

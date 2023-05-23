@@ -1,0 +1,84 @@
+.swiperTwo {
+  background-image: url("/src/images/image-four.jpg");
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: $white;
+}
+.mySwiperTwo {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: calc(100vw - 50%);
+  height: calc(100vh - 0px);
+  margin: 0;
+  overflow: hidden;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+  &__wrapper {
+    top: calc(50% - 160px);
+  }
+}
+
+.slide__flex {
+  left: 20%;
+  position: absolute;
+  padding: 0 20px;
+  @media (max-width: 767px) {
+    left: 10%;
+  }
+  @media (max-width: 320px) {
+    left: 2%;
+  }
+  &--title {
+    font-size: $fs-80;
+    @media (max-width: 767px) {
+      font-size: $fs-32;
+    }
+  }
+  &--desc {
+    font-size: $fs-18;
+    margin: 30px 0px;
+    line-height: 24px;
+  }
+  &--discover {
+    border: 1px solid #979797;
+    padding: 12px 0px;
+    background: none;
+    letter-spacing: 1px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    min-width: 142px;
+    font-size: $fs-16;
+  }
+  &--discover:hover {
+    letter-spacing: 2px;
+  }
+}
+.button-section {
+  display: flex;
+  width: 182px;
+  position: absolute;
+  z-index: 1;
+  left: 20%;
+  bottom: 52px;
+  @media (max-width: 767px) {
+    left: auto;
+    right: 14px;
+  }
+  &--next:after {
+    content: url("/src/images/right-arrow.png");
+  }
+  &--prev:after {
+    content: url("/src/images/left-arrow.png");
+  }
+  &--pagination {
+    position: absolute;
+    top: -22px;
+    right: 35px;
+    font-size: $fs-32;
+    font-weight: $fw-100;
+  }
+}

@@ -1,0 +1,31 @@
+---
+import arrowLeft from "../../images/left-arrow-icon.png";
+---
+
+<div class="search-block">
+    <form class="search-form">
+       <span><img src={arrowLeft} class="search-cancel" alt="Arrow"/></span>
+       <input type="search" name="search" class="search-input" placeholder="Search here...">
+    </form>
+</div>
+
+<script>
+// Open and Close Search Bar Toggle
+const searchBlock = document.querySelector(".search-block");
+const searchToggleWhite = document.querySelector(".search-toggle.icon-white");
+const searchToggleBlack = document.querySelector(".search-toggle.icon-black");
+const searchCancel = document.querySelector(".search-cancel");
+
+if (searchToggleWhite && searchToggleBlack && searchCancel) {
+   searchToggleWhite.addEventListener("click", () => {
+      searchBlock.classList.add("is-active");
+   });
+   searchToggleBlack.addEventListener("click", () => {
+      searchBlock.classList.add("is-active");
+   });
+
+   searchCancel.addEventListener("click", () => {
+      searchBlock.classList.remove("is-active");
+   });
+}
+</script>

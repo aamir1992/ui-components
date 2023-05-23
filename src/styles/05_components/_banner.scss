@@ -1,0 +1,182 @@
+/* Inner Banner */
+.bannersm {
+    &--1 {
+        padding: 70px 0 0 0;
+        .bannersm {
+            &__wrap {
+                display: grid;
+                gap: 40px;
+            }
+            &__content {
+                h1 {
+                    color: $white;
+                    font-size: $fs-50;
+                    margin-bottom: 30px;
+                }
+                p {
+                    color: $white;
+                    font-size: $fs-18;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+    &--2 {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 450px;
+        position: relative;
+        &::before {
+            content: "";
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent 50%);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .bannersm__content {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            h1 {
+                color: $white;
+                font-size: $fs-60;
+            }
+        }
+    }
+}
+/**/
+/* Hero Banner */
+.herobanner {
+    &--1 {
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: "";
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        .herobanner {
+            &__bg {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            &__content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                @include mq('tablet-wide'){
+                    width: 95%;
+                }
+                h1 {
+                    color: $white;
+                    font-size: $fs-50;
+                    margin-bottom: 30px;
+                }
+                p {
+                    color: $white;
+                    font-size: $fs-18;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+    &--2 {
+        background-color: #fafafa;
+        .herobanner {
+            &__wrap {
+                display: grid;
+                gap: 40px;
+            }
+            &__content {
+                h1 {
+                    font-size: $fs-50;
+                    margin-bottom: 30px;
+                    text-transform: uppercase;
+                }
+                p {
+                    font-size: $fs-18;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+    &--3 {
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        padding: 200px 0;
+        @include mq('tablet-wide'){
+            padding: 80px 0;
+        }
+        .herobanner {
+            &__wrap {
+                display: grid;
+                gap: 40px;
+            }
+            &__img {
+                img {
+                    box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.2);
+                }
+            }
+            &__content {
+                h1 {
+                    font-size: $fs-50;
+                    margin-bottom: 30px;
+                    text-transform: uppercase;
+                }
+                p {
+                    font-size: $fs-18;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
+/*  */
+/* Responsive */
+@media (min-width: 1024px) {
+    .bannersm {
+        &--1 {
+            .bannersm__wrap {
+                grid-template-columns: 1fr 0.8fr;
+                align-items: center;
+            }
+        }
+    }
+    .herobanner {
+        &--2 {
+            .herobanner {
+                &__wrap {
+                    grid-template-columns: 1fr 1fr;
+                    align-items: center;
+                }
+            }
+        }
+        &--3 {
+            .herobanner {
+                &__wrap {
+                    grid-template-columns: 1fr 1fr;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+/* */

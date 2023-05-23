@@ -1,0 +1,26 @@
+[
+  {
+    "id": "tab1",
+    "label": "UI",
+    "content-id": "content1",
+    "content-tab": "Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs."
+  },
+  {
+    "id": "tab2",
+    "label": "UX",
+    "content-id": "content2",
+    "content-tab": "Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs."
+  },
+  {
+    "id": "tab3",
+    "label": "Dev",
+    "content-id": "content3",
+    "content-tab": "Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs."
+  },
+  {
+    "id": "tab4",
+    "label": "Testing",
+    "content-id": "content4",
+    "content-tab": "Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs."
+  }
+]

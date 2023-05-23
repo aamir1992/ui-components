@@ -1,0 +1,151 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+/* Background Colors */
+.bg-primary{
+    background-color: $primary-color;
+}
+.bg-black {
+    background-color: $black;
+}
+.bg-lwhite {
+    background-color: $white-100;
+}
+.bg-dark{
+    background-color: $dark-color;
+}
+.bg-pink{
+    background-color: $pink-color;
+}
+/**/
+/* Background Img */
+.bgimg {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    color: $white;
+}
+/* */  
+/* Margin */
+.mb-10 {
+    margin-bottom: 10px;
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+.mb-30 {
+    margin-bottom: 30px;
+}
+.mb-40 {
+    margin-bottom: 40px;
+}
+.mb-50 {
+    margin-bottom: 50px;
+}
+.mb-60 {
+    margin-bottom: 60px;
+}
+.mb-100 {
+    margin-bottom: 100px;
+}
+.mb-150 {
+    margin-bottom: 150px;
+}
+/**/
+/* Text Color */
+.txt-primary {
+    color: $primary-color;
+}
+.txt-white {
+    color: $white !important;
+}
+.txt-orange {
+    color: $orange-color;
+}
+/**/
+/* Tools */
+.readmore {
+    position: relative;
+    line-height: 1;
+    font-size: $fs-14;
+    cursor: pointer;
+    &--arrow {
+        &::after {
+            content: "";
+            position: absolute;
+            transition: 0.4s all ease-in-out;
+            top: 50%;
+            transform: translateY(-38%);
+            right: -21px;
+            width: 14px;
+            height: 14px;
+            background-size: contain;
+            background-image: url(../images/arrow-black.svg);
+            background-repeat: no-repeat;
+        }
+        &:hover {
+            &::after {
+                right: -26px;
+            }
+        }
+    }
+}
+
+.spinner {
+    display: inline-block;
+    -webkit-animation: spin 2s linear infinite;
+    -moz-animation: spin 2s linear infinite;
+    -o-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0%,
+    from {
+        -webkit-transform: rotate(0);
+        -moz-transform: rotate(0);
+        -o-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    100%,
+    to {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.backdrop {
+    background-color: rgba(0,0,0,.5);
+    width: 100%;
+    height: 100%;
+    z-index: 800;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    transition: all .4s ease;
+
+    &.show {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.lock-scroll {
+  overflow-y: hidden;
+}
+
+.filler{flex-grow:1; text-align:center}
+
+/* */
+
+/**
+ * Clear inner floats
+ */

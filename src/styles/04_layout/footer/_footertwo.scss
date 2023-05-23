@@ -1,0 +1,155 @@
+$footer-height: 100px;
+$footer-background-color: $dark-color;
+$footer-text-color: $white;
+$footer-link-color: $white;
+$footer-link-hover-color: $white;
+
+.footertwo {
+    background-color: $footer-background-color;
+    padding: $section-pad 0;
+    margin-bottom: $section-mar;
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    li,
+    a {
+        color: $footer-text-color;
+        font-size: $fs-15;
+    }
+    &__logo {
+        margin-bottom: $space-15;
+    }
+    &__col2 {
+        display: flex;
+        padding-bottom: $space-15;
+        gap: 100px;
+    }
+    &__col2section {
+        margin-bottom: $section-mar;
+        display: flex;
+        @include mq("tablet") {
+            display: block;
+            margin-bottom: $space-30;
+        }
+        &--left {
+            flex: 0 0 65%;
+        }
+        &--right {
+            flex: 0 0 35%;
+            h5,
+            p {
+                margin-bottom: $space-15;
+            }
+        }
+        &--leftwrapper {
+            display: inline-flex;
+            border-bottom: 1px solid $white;
+            margin-bottom: $space-10;
+        }
+    }
+    &__tools {
+        form {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            &.round {
+                input,
+                button {
+                    border-radius: 30px;
+                }
+            }
+            @include mq("tablet") {
+                display: block;
+            }
+        }
+        input {
+            padding: $space-10 $space-30;
+            // background: $primary-color;
+            color: $footer-text-color;
+            outline: none;
+            border: transparent;
+            width: 100%;
+            @include mq("tablet") {
+                margin-bottom: 10px;
+            }
+        }
+        button {
+            background: $primary-color;
+            color: $footer-text-color;
+            padding: $space-10 $space-30;
+            border: 1px solid $white;
+            &:hover {
+                color: $primary-color;
+                background-color: $white;
+                border: 1px solid $primary-color;
+            }
+        }
+    }
+    &__horlist {
+        display: flex;
+        margin-bottom: $space-15;
+        @include mq("tablet") {
+            margin-bottom: $space-40;
+        }
+        li {
+            position: relative;
+
+            &:not(:last-child) {
+                margin-right: $space-25;
+                padding-right: $space-25;
+            }
+            &:not(:last-child)::after {
+                position: absolute;
+                content: "";
+                height: 15px;
+                width: 1px;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                background: #ffffff;
+            }
+        }
+    }
+    &__socialicons {
+        padding: $space-15 0;
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+            li {
+                line-height: 1;
+                color: $footer-text-color;
+                a {
+                    color: $footer-text-color;
+                }
+            }
+        }
+    }
+}
+
+.footertwobottom {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: $space-80;
+    // padding-bottom: $space-60;
+    img {
+        margin-bottom: $space-20;
+    }
+    p {
+        margin-bottom: $space-15;
+        color: $footer-text-color;
+        a {
+            color: $footer-text-color;
+        }
+        &.link {
+            padding-top: $space-15;
+            border-top: 1px solid $white;
+            color: $footer-text-color;
+        }
+    }
+}

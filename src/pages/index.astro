@@ -1,0 +1,79 @@
+---
+import Layout from "../layouts/Layout.astro";
+import sliderPage from "../pages/slider.astro";
+import tabPage from "../pages/tab.astro";
+import footerPage from "../pages/footer.astro";
+import accordionPage from "../pages/accordion.astro";
+import contentPage from "../pages/content-type.astro";
+import cardsPage from "../pages/cards/index.astro";
+import bannerPage from "../pages/banner/herobanner.astro";
+import FooterImg from "../images/homeImages/footer.png";
+import cardImg from "../images/homeImages/cards.png";
+import accordionImg from "../images/homeImages/accordion.png";
+import contentImg from "../images/homeImages/content-type.png";
+import sliderImg from "../images/homeImages/slider.png";
+import tabImg from "../images/homeImages/tab.png";
+import bannerImg from "../images/homeImages/banner.png";
+---
+
+<Layout title="cards">
+  <div class="index_container">
+    <h2 class="index_container__title">UI Components</h2>
+
+    <div class="index_card">
+      <div class="index_card--box">
+        <a href="/cards">
+          <img src={cardImg} alt="cardImg" />
+          <div class="viewBtn">View</div>
+          <p>Card Components</p>
+        </a>
+      </div>
+      <div class="index_card--box">
+        <a href="/accordion">
+          <img src={accordionImg} alt="accordionImg" />
+          <div class="viewBtn">View</div>
+          <p>Accordion Components</p>
+        </a>
+      </div>
+      <div class="index_card--box">
+        <a href="/slider">
+          <img src={sliderImg} alt="sliderImg" />
+          <div class="viewBtn">View</div>
+          <p>Slider Components</p>
+        </a>
+      </div>
+      <div class="index_card--box">
+        <a href="/banner/herobanner">
+          <img src={bannerImg} alt="bannerImg" />
+          <div class="viewBtn">View</div>
+          <p>Banner Components</p>
+        </a>
+      </div>
+      <div class="index_card--box">
+        <a href="/content-type">
+          <img src={contentImg} alt="contentImg" />
+          <div class="viewBtn">View</div>
+          <p>Content Type Components</p></a
+        >
+      </div>
+      <div class="index_card--box">
+        <a href="/tab">
+          <img src={tabImg} alt="tabImg" />
+          <div class="viewBtn">View</div>
+          <p>Tab Components</p>
+        </a>
+      </div>
+      <div class="index_card--box">
+        <a href="/footer">
+          <img src={FooterImg} alt="FooterImg" />
+          <div class="viewBtn">View</div>
+          <p>Footer Components</p>
+        </a>
+      </div>
+      <a href="/homePageOne" class="index_card--box">
+        <div class="viewBtn">View</div>
+        <h1>Home Page One</h1>
+      </a>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,170 @@
+---
+import logo from "../../images/logo.png";
+import searchIconWhite from "../../images/search-icon-white.svg";
+import searchIconBlack from "../../images/search-icon-black.svg";
+import megaMenuLogo from "../../images/image-one.jpg";
+import Search from "./Search.astro";
+import SearchBlock from "./SearchBlock.astro";
+---
+
+<!--===========================================
+	Header 
+===============================================-->
+<header class="headerTypeOne header">
+  <nav>
+    <div class="container">
+      <div class="wrapper">
+        <div class="logo"><a href="#"><img src={logo} alt="Logo" /></a></div>
+        <div class="filler"></div>
+        <ul class="nav-links">
+          <li class="has-submenu"><a href="#" title="Our Company">Our Company</a></li>
+          <li class="has-submenu">
+            <a href="#" class="desktop-item"
+              >Our Trends &nbsp;<i class="fa fa-angle-down"></i></a
+            >
+            <div class="mega-box">
+              <div class="content">
+                <div class="mega-menu-flex-row">
+                  <img src={megaMenuLogo} alt="Menu Image" />
+                </div>
+                <div class="mega-menu-flex-row">
+                  <div class="megaMenuTitle">Design Services</div>
+                  <ul class="mega-links">
+                    <li><a href="#">Graphics</a></li>
+                    <li><a href="#">Vectors</a></li>
+                    <li><a href="#">Business cards</a></li>
+                    <li><a href="#">Custom logo</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-flex-row">
+                  <div class="megaMenuTitle">Email Services</div>
+                  <ul class="mega-links">
+                    <li><a href="#">Personal Email</a></li>
+                    <li><a href="#">Business Email</a></li>
+                    <li><a href="#">Mobile Email</a></li>
+                    <li><a href="#">Web Marketing</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-flex-row">
+                  <div class="megaMenuTitle">Security services</div>
+                  <ul class="mega-links">
+                    <li><a href="#">Site Seal</a></li>
+                    <li><a href="#">VPS Hosting</a></li>
+                    <li><a href="#">Privacy Seal</a></li>
+                    <li><a href="#">Website design</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="has-submenu">
+            <a href="#" class="desktop-item"
+              >Our Technology &nbsp;<i class="fa fa-angle-down"></i></a
+            >
+            <ul class="drop-menu">
+              <li>
+                <a href="#" title="Artificial intelligence"
+                  >Artificial intelligence</a
+                >
+              </li>
+              <li class="has-subchildmenu">
+                <a href="#" class="desktop-item" title="Internet of things">Internet of things &nbsp;<i class="fa fa-angle-down"></i></a>
+                <ul class="drop-submenu">
+                    <li>
+                      <a href="#" title="Robotics"
+                        >Robotics</a>
+                    </li>
+                    <li><a href="#" title="Quantum computing">Quantum computing</a></li>
+                    <li>
+                      <a href="#" title="Automation"
+                        >Automation</a>
+                    </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" title="Augmented reality"
+                  >Augmented reality</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li><a href="#" title="Contact Us">Contact Us</a></li>
+        </ul>
+        <div class="outsideMenu">
+          <div class="outsideMenu__padding">
+            <span>
+                <img src={searchIconWhite} class="search-toggle icon-white" alt="Search" title="Search" />
+                <img src={searchIconBlack} class="search-toggle icon-black" alt="Search" title="Search" />
+              </span>
+          </div>
+          <!-- <div class="outsideMenu__padding search">
+            <img class="search-icon" src={searchIconWhite} alt="Search" title="Search" />
+          </div> -->
+          <div class="outsideMenu__padding">
+            <a class="button primary outlined border-1" href="#" title="Message"
+              >Message</a
+            >
+          </div>
+        </div>
+        <label for="menu-btn" class="btn menu-btn" id="menuBtn">
+          <span></span>
+        </label>
+      </div>
+    </div>
+  </nav>
+  <!-- <Search/> -->
+  <SearchBlock />
+</header>
+
+<div class="backdrop"></div>
+
+<script>
+  var body = document.querySelector("body");
+  var shadow = document.querySelector(".backdrop");
+  var mainMenuNav = document.querySelector(".nav-links");
+  let menuBtn = document.querySelector("#menuBtn");
+
+  /* $(".has-submenu > a").click(function() {
+    $(this).toggleClass('opened')
+    $(this).parent().find('ul.drop-menu:first').toggleClass('ShowMenu');
+    $(this).parent().find('.mega-box:first').toggleClass('ShowMenu');
+  });
+  $(".has-subchildmenu > a").click(function() {
+    $(this).toggleClass('menu-opened')
+    $(this).parent().find('ul.drop-submenu:first').toggleClass('ShowMenu');
+  }); */
+
+  const submenus = document.querySelectorAll('.has-submenu a');
+  const subchildmenu = document.querySelectorAll('.has-subchildmenu a');
+
+
+  submenus.forEach(menus => {
+    menus.addEventListener('click', function(e) {
+      //e.preventDefault();
+      menus.classList.toggle("opened");
+      if(menus.parentNode.querySelector(".drop-menu:first-of-type")) {
+        menus.parentNode.querySelector(".drop-menu:first-of-type").classList.toggle("ShowMenu");
+      }
+      if(menus.parentNode.querySelector(".mega-box:first-of-type")) {
+        menus.parentNode.querySelector(".mega-box:first-of-type").classList.toggle("ShowMenu");
+      }
+   })
+  })
+
+  subchildmenu.forEach(childmenus => {
+    childmenus.addEventListener('click', function(e) {
+     //e.preventDefault();
+     childmenus.classList.toggle("menu-opened");
+     childmenus.parentNode.querySelector(".drop-submenu:first-of-type").classList.toggle("ShowMenu");
+   })
+  })
+
+  menuBtn.addEventListener("click", (e) => {
+    mainMenuNav.classList.toggle("open");
+    menuBtn.classList.toggle("open");
+    body.classList.toggle("lock-scroll");
+    shadow.classList.toggle("show");
+  });
+ 
+</script>
+<!--  -->

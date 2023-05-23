@@ -1,0 +1,39 @@
+---
+import data from "../../data/card.js";
+import linkedin from "../../images/linkedin.png";
+import quotes from "../../images/quotes.png";
+import info from "../../images/info.png";
+---
+
+<section class="section--pad bg-lwhite">
+    <div class="container">
+        <!-- Card Type 3 -->
+        <div class="row mb-150">
+            {
+            data.slice(0, 3).map((input, index) => {
+            return (
+            <div class="col-sm-4">
+                <div class="card card--3">
+                    <img src={input.userimg} alt="">
+                    <div class="card__content">
+                        <h3>{input.subtitle}</h3>
+                        <p class="txt-orange">{input.userdesignation}</p>
+                        <p>{input.userorganization}</p>
+                        <div class="card__hcontent">
+                            <p>{input.description}</p>
+                        </div>
+                        <ul>
+                            <li><img src={linkedin} alt="Linkedin" title="Linkedin" /></li>
+                            <li><img src={quotes} alt="Quotes" title="Quotes" /></li>
+                            <li><img src={info} alt="Info" title="Info" /></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            );
+            })
+            }
+        </div>
+        <!--  -->
+    </div>
+</section>

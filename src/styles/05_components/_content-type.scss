@@ -1,0 +1,130 @@
+/* Column Grids */
+.col {
+    p {
+        margin: 20px 0;
+        font-size: $fs-18;
+        line-height: 1.4;
+        color: $gray-700;
+    }
+    &2 {
+        display: grid;
+        gap: 40px;
+        .col__img {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+/**/
+/* List items in section */
+.list {
+    display: grid;
+    gap: 15px;
+    margin: 30px 0;
+    li {
+        font-size: $fs-16;
+        color: $gray-400;
+        position: relative;
+        padding-left: 20px;
+        &::after {
+            content: "";
+            position: absolute;
+            transition: 0.4s all ease-in-out;
+            top: 10px;
+            left: 0px;
+            width: 14px;
+            height: 14px;
+            background-size: contain;
+            background-image: url(../images/active.png);
+            background-repeat: no-repeat;
+        }
+    }
+}
+/* */
+/* Newsletter */
+.newsletter {
+    &--col2 {
+        display: grid;
+        gap: 40px;
+    }
+    h2 {
+        color: $white;
+        margin-bottom: 30px;
+    }
+    p {
+        color: $white;
+        margin-bottom: 30px;
+    }
+}
+/* */
+/* Animation */
+.curveanim {
+    border-radius: 52% 48% 59% 41% / 53% 40% 60% 47%;
+    overflow: hidden;
+    animation: blobAnim 30s linear infinite;
+}
+
+@keyframes blobAnim {
+    0%,
+    100% {
+        border-radius: var(--blob-radius);
+    }
+
+    10% {
+        border-radius: 33% 67% 50% 50% / 43% 39% 61% 57%;
+    }
+
+    20% {
+        border-radius: 51% 49% 31% 69% / 65% 39% 61% 35%;
+    }
+
+    30% {
+        border-radius: 51% 49% 56% 44% / 45% 39% 61% 55%;
+    }
+
+    40% {
+        border-radius: 66% 34% 33% 67% / 48% 71% 39% 52%;
+    }
+
+    50% {
+        border-radius: 46% 54% 33% 67% / 48% 30% 70% 52%;
+    }
+
+    60% {
+        border-radius: 46% 54% 56% 44% / 48% 30% 70% 52%;
+    }
+
+    70% {
+        border-radius: 46% 54% 56% 44% / 65% 53% 47% 35%;
+    }
+
+    80% {
+        border-radius: 67% 33% 56% 44% / 37% 53% 47% 63%;
+    }
+
+    90% {
+        border-radius: 46% 54% 32% 68% / 37% 53% 47% 63%;
+    }
+}
+/**/
+/* Responsive */
+@media (min-width: 1024px) {
+    .col2 {
+        grid-template-columns: 1fr 0.8fr;
+        align-items: center;
+        &__reverse {
+            grid-template-columns: 0.8fr 1fr;
+        }
+    }
+    .list {
+        grid-template-columns: 1fr 1fr;
+    }
+    .newsletter {
+        &--col2 {
+            grid-template-columns: 0.5fr 0.4fr;
+            align-items: center;
+        }
+    }
+}
+/**/

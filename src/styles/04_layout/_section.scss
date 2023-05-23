@@ -1,0 +1,20 @@
+/* Section */
+.section {
+    &--mar {
+        margin: 70px 0;
+    }
+    &--pad {
+        padding: 70px 0;
+    }
+    &__title{
+        margin-bottom: 20px;
+        font-size: $fs-36;
+    }
+    &__highlight{
+        margin-bottom: 20px;
+        font-size: $fs-18;
+        color: $primary-color;
+        font-weight: $fw-500;
+    }
+}
+/*  */

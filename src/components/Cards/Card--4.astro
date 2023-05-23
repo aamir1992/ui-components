@@ -1,0 +1,34 @@
+---
+import data from "../../data/card.js";
+---
+
+<section class="section--pad bg-lwhite">
+  <div class="container">
+    <!-- Card Type 4 -->
+    <div class="row mb-60">
+      {
+        data.slice(0, 3).map((input, index) => {
+          return (
+            <div class="col-sm-4">
+              <div class="card card--4">
+                <div class="card__head">
+                  <img src={input.blogimg} alt="" />
+                </div>
+                <div class="card__content">
+                  <h3>
+                    <a href="#">{input.title}</a>
+                  </h3>
+                  <p>{input.description}</p>
+                  <a href="#" class="readmore readmore--arrow">
+                    Read More
+                  </a>
+                </div>
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+    <!--  -->
+  </div>
+</section>

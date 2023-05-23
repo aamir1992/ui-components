@@ -1,0 +1,35 @@
+.hero-banner{
+        padding: 15vh 0 15vh 0;
+        // background: url("/src/images/banner-1.webp") no-repeat center;
+        background-color: $gray-300;
+        background-size: cover;
+        h1 {
+            text-align: center;
+            font-size: clamp(1rem, 0.4074rem + 2.963vw, 3rem);
+            color: #fff;
+            word-spacing: 1px;
+            letter-spacing: -0.068px ;
+            font-weight: 700 !important;
+        }
+       
+        p{
+            font-size: $fs-24;
+            color: $white;
+            text-align: center;
+        }
+        .hero-banner-cta{
+            margin: 20px 0;
+        }
+}
+.acc-rit-img{
+    background-image: url(/src/images/placeholder.png);
+    padding: 0;
+    background-size: 50% auto;
+    background-position: top right;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+    h1{
+        margin:10px 0;
+        font-family: $fs-family-primary;
+    }
+}

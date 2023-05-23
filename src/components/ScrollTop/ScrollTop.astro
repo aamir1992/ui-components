@@ -1,0 +1,37 @@
+---
+import scrollTop from "../../images/scroll-top-icon.png";
+---
+
+<div class="scrollTop">
+    <a href="#" title="Scroll to Top"><img src={scrollTop} alt="Top" /></a>
+</div>
+
+<script>
+    const button = document.querySelector('.scrollTop');
+
+    const displayButton = () => {
+    window.addEventListener('scroll', () => {
+    
+        if (window.scrollY > 100) {
+        button.style.display = "block";
+        } else {
+        button.style.display = "none";
+        }
+    });
+    };
+
+    const scrollToTop = () => {
+        if(button) {
+            button.addEventListener("click", (e) => {
+            e.preventDefault();
+            window.scroll({
+                top: 0,
+                behavior: 'smooth'
+            });
+            });
+        }
+    };
+
+    displayButton();
+    scrollToTop();
+</script>

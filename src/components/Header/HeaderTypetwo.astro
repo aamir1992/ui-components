@@ -1,0 +1,95 @@
+---
+import logo from "../../images/logo.png";
+import searchIconWhite from "../../images/search-icon-white.svg";
+import searchIconBlack from "../../images/search-icon-black.svg";
+---
+
+<!--===========================================
+	Header Type Two
+===============================================-->
+
+<header class="headerTypeTwo header">
+    <div class="container">
+        <div class="flex-menu">
+            <a href="#" title="Logo"><img class="logo desktop-only" src={logo} alt="Logo" title="Logo">
+                <img class="logo device-only" src={logo} alt="Logo" title="Logo">
+            </a>
+            <div class="rt-col">
+                <div class="search">
+                  <img src={searchIconWhite} class="search-icon icon-white" alt="Logo" />
+                  <img src={searchIconBlack} class="search-icon icon-black" alt="Logo" />
+                </div>
+                <div class="hamburger main-ham">
+                  <input type="checkbox" /><span> </span><span></span>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="search-overlay">
+                <div class="container">
+                <img class="logo overlay-logo" src={logo} alt="Logo" title="Logo">
+                  <div class="hamburger">
+                    <input type="checkbox" checked readonly /><span> </span><span></span>
+                  </div>
+                  <div class="search-box">
+                    <input id="pages" placeholder="Search" tabindex="-1" />
+                    <input type="hidden" id="pages-id" />
+                    <div class="scroll-box">
+                      <a href="javascript:;" class="upclick"></a>
+                      <a href="javascript:;" class="downclick"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <ul id="menu">
+                <div class="container">
+                  <img class="logo overlay-logo" src={logo} alt="Logo" title="Logo">
+                  <li><a class="home-page" href="index.html" title="HOME">HOME</a></li>
+                  <li>
+                    <a class="about-page" href="about-us.html" title="ABOUT US">ABOUT US</a>
+                  </li>
+                  <li>
+                    <a class="youth-page" href="our-youth.html" title="OUR YOUTH"
+                      >OUR YOUTH</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="research-page"
+                      href="research-engagement.html"
+                      title="RESEARCH &amp; ENGAGEMENT"
+                      >RESEARCH & ENGAGEMENT</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="programmes-page"
+                      href="programme-grants.html"
+                      title="PROGRAMMES &amp; GRANTS"
+                      >PROGRAMMES & GRANTS</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="youthAction-page"
+                      href="youth-action-challenge.html"
+                      title="YOUTH ACTION CHALLENGE"
+                      >YOUTH ACTION CHALLENGE</a
+                    >
+                  </li>
+                  <li>
+                    <a class="whatsnew-page" href="newsroom.html" title="NEWSROOM"
+                      >NEWSROOM</a
+                    >
+                  </li>
+                  <li>
+                    <a class="joinus-page" href="contact-us.html" title="CONTACT US"
+                      >CONTACT US</a
+                    >
+                  </li>
+                </div>
+              </ul>      
+        </div>        
+    </div>
+</header>

@@ -1,0 +1,265 @@
+$heading-font-family: "Montserrat", sans-serif;
+$body-font-family: "Raleway", sans-serif;
+$opensans-font-family: 'Open Sans', sans-serif;
+$heading-line-height: 1.2;
+$body-line-height: 1.5;
+
+/*=============== color ===============*/
+
+$primary-color: #B2142D;
+$secondary-color: #252a60;
+$tertiary-color: #ffc881;
+$success-color: #28a745;
+$danger-color: #dc3545;
+$warning-color: #ffc107;
+$info-color: #17a2b8;
+$light-color: #f8f9fa;
+$dark-color: #343a40;
+$orange-color: #dd853d;
+$orange-100-color: #eb8314;
+$popup-bg-color: rgba(37, 42, 96, 0.75);
+$pink-color: #D83488;
+$mega-menu-border-color: rgba(255, 255, 255, 0.3); 
+
+$white: #ffffff;
+$white-100: #f9f6f0;
+$white-500: #EBECEF;
+$black: #000000;
+$gray-100: #d8d8d8;
+$gray-200: #979797;
+$gray-300: #727272;
+$gray-400: #4c4c4c;
+$gray-500: #494949;
+$gray-600: #353338;
+$gray-700: #333532;
+$gray-800: #595959;
+$red: #ff0000;
+$green: #00ff00;
+
+/*=============== font size ===============*/
+
+$h1: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
+$h2: clamp(1rem, 0.8571rem + 0.7143vw, 1.5rem);
+$h3: clamp(1rem, 0.9514rem + 0.2429vw, 1.17rem);
+$h4: clamp(1rem, 1rem + 0vw, 1rem);
+$h5: clamp(0.83rem, 0.83rem + 0vw, 0.83rem);
+$h6: clamp(0.75rem, 0.75rem + 0vw, 0.75rem);
+
+$paragraph: 1rem;
+
+$small-font-size: 0.875rem;
+$regular-font-size: 1rem;
+$large-font-size: 1.125rem;
+
+$fs-8: 0.5rem;
+$fs-9: 0.563rem;
+$fs-10: 0.625rem;
+$fs-11: 0.688rem;
+$fs-12: 0.75rem;
+$fs-13: 0.813rem;
+$fs-14: 0.875rem;
+$fs-15: 0.938rem;
+$fs-16: 1rem;
+$fs-17: 1.063rem;
+$fs-18: 1.125rem;
+$fs-19: 1.188rem;
+$fs-20: 1.25rem;
+$fs-21: 1.313rem;
+$fs-22: 1.375rem;
+$fs-23: 1.438rem;
+$fs-24: 1.5rem;
+$fs-25: 1.563rem;
+$fs-26: 1.625rem;
+$fs-27: 1.688rem;
+$fs-28: 1.75rem;
+$fs-29: 1.813rem;
+$fs-30: 1.875rem;
+$fs-31: 1.938rem;
+$fs-32: 2rem;
+$fs-33: 2.063rem;
+$fs-34: 2.125rem;
+$fs-35: 2.188rem;
+$fs-36: 2.25rem;
+$fs-37: 2.313rem;
+$fs-38: 2.375rem;
+$fs-39: 2.438rem;
+$fs-40: 2.5rem;
+$fs-41: 2.563rem;
+$fs-42: 2.625rem;
+$fs-43: 2.688rem;
+$fs-44: 2.75rem;
+$fs-45: 2.813rem;
+$fs-46: 2.875rem;
+$fs-47: 2.938rem;
+$fs-48: 3rem;
+$fs-49: 3.063rem;
+$fs-50: 3.125rem;
+$fs-51: 3.188rem;
+$fs-52: 3.25rem;
+$fs-53: 3.313rem;
+$fs-54: 3.375rem;
+$fs-55: 3.438rem;
+$fs-56: 3.5rem;
+$fs-57: 3.563rem;
+$fs-58: 3.625rem;
+$fs-59: 3.688rem;
+$fs-60: 3.75rem;
+$fs-61: 3.813rem;
+$fs-62: 3.875rem;
+$fs-63: 3.938rem;
+$fs-64: 4rem;
+$fs-65: 4.063rem;
+$fs-66: 4.125rem;
+$fs-67: 4.188rem;
+$fs-68: 4.25rem;
+$fs-69: 4.313rem;
+$fs-70: 4.375rem;
+$fs-71: 4.438rem;
+$fs-72: 4.5rem;
+$fs-73: 4.563rem;
+$fs-74: 4.625rem;
+$fs-75: 4.688rem;
+$fs-76: 4.75rem;
+$fs-77: 4.813rem;
+$fs-78: 4.875rem;
+$fs-79: 4.938rem;
+$fs-80: 5rem;
+$fs-81: 5.063rem;
+$fs-82: 5.125rem;
+$fs-83: 5.188rem;
+$fs-84: 5.25rem;
+$fs-85: 5.313rem;
+$fs-86: 5.375rem;
+$fs-87: 5.438rem;
+$fs-88: 5.5rem;
+$fs-89: 5.563rem;
+$fs-90: 5.625rem;
+$fs-91: 5.688rem;
+$fs-92: 5.75rem;
+$fs-93: 5.813rem;
+$fs-94: 5.875rem;
+$fs-95: 5.938rem;
+$fs-96: 6rem;
+$fs-97: 6.063rem;
+$fs-98: 6.125rem;
+$fs-99: 6.188rem;
+$fs-100: 6.25rem;
+
+/*=============== font weight ===============*/
+
+$fw-100: 100;
+$fw-200: 200;
+$fw-300: 300;
+$fw-400: 400;
+$fw-500: 500;
+$fw-600: 600;
+$fw-700: 700;
+$fw-800: 800;
+$fw-900: 900;
+
+/*=============== Border Radius ===============*/
+$br-1: 1px;
+$br-2: 2px;
+$br-3: 3px;
+$br-4: 4px;
+$br-5: 5px;
+$br-6: 6px;
+$br-7: 7px;
+$br-8: 8px;
+$br-9: 9px;
+$br-10: 10px;
+$br-11: 11px;
+$br-12: 12px;
+$br-13: 13px;
+$br-14: 14px;
+$br-15: 15px;
+$br-25: 25px;
+$br-50: 50%;
+
+/*=============== Spacing ===============*/
+
+// $base-spacing: 16px;
+// $half-spacing: calc($base-spacing) / 2;
+// $double-spacing: calc($base-spacing) * 2;
+// $triple-spacing: calc($base-spacing) * 3;
+
+/*=============== Border ===============*/
+$border-width: 1px;
+$border-radius: 5px;
+
+/*=============== Breakpoints ===============*/
+$small-screen: 576px;
+$medium-screen: 768px;
+$large-screen: 992px;
+$tab-screen: 1024px;
+$extra-large-screen: 1200px;
+
+/*=============== Buttons ===============*/
+$button-padding: 12px 24px;
+$button-border: 2px solid $primary-color;
+$button-border-radius: $border-radius;
+$button-background-color: $primary-color;
+$button-color: $white;
+
+/*=============== Forms ===============*/
+$form-input-padding: 8px 12px;
+$form-input-border: 1px solid $light-color;
+$form-input-border-radius: $border-radius;
+
+/*=============== Navigation ===============*/
+$nav-height: 60px;
+$nav-background-color: $white;
+$nav-link-color: $white;
+$nav-link-hover-color: $light-color;
+
+/*=============== Footer ===============*/
+$footer-height: 100px;
+$footer-background-color: $dark-color;
+$footer-text-color: $white;
+
+
+/*=============== Spaceing ===============*/
+
+$space-5: 5px;
+$space-6: 6px;
+$space-7: 7px;
+$space-8: 8px;
+$space-10: 10px;
+$space-12: 12px;
+$space-15: 15px;
+$space-16: 16px;
+$space-20: 20px;
+$space-25: 25px;
+$space-30: 30px;
+$space-35: 35px;
+$space-40: 40px;
+$space-45: 45px;
+$space-50: 50px;
+$space-60: 60px;
+$space-70: 70px;
+$space-80: 80px;
+
+
+/*=============== Section Padding Spaceing ===============*/
+
+$section-pad: 60px;
+$section-pad-top: 60px;
+$section-pad-bottom: 60px;
+$section-pad-left: 60px;
+$section-pad-right: 60px;
+$section-pad-vertical: 30px;
+$section-pad-horizontal: 30px;
+$section-pad-vertical: 15px;
+$section-pad-horizontal: 15px;
+
+/*=============== Section Margin Spaceing ===============*/
+
+$section-mar: 60px;
+$section-mar-top: 60px;
+$section-mar-bottom: 60px;
+$section-mar-left: 60px;
+$section-mar-right: 60px;
+$section-mar-vertical: 30px;
+$section-mar-horizontal: 30px;
+$section-mar-vertical: 15px;
+$section-mar-horizontal: 15px;

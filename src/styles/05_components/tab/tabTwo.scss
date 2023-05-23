@@ -1,0 +1,198 @@
+#tsum-tabs {
+  h1 {
+    padding: 50px 0;
+    font-weight: $fw-400;
+    text-align: center;
+  }
+  h3 {
+    font-size: $h3;
+  }
+  p {
+    margin: 0 0 20px;
+    line-height: 1.5;
+  }
+  main {
+    // min-width: 320px;
+    max-width: 100%;
+    padding: 50px;
+    margin: 0 auto;
+    background: $white;
+    transition: 0.8s;
+    @media (max-width: 767px) {
+      padding: 40px 20px;
+    }
+  }
+  section {
+    display: none;
+    padding: 20px 0px;
+    border-top: $br-1 solid $gray-200;
+  }
+  input {
+    display: none;
+  }
+  label {
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 15px 25px;
+    font-weight: $fw-600;
+    text-align: center;
+    color: $info-color;
+    border: $br-1 solid transparent;
+
+    @media (max-width: 768px) {
+      font-size: 0;
+    }
+    @media (max-width: 400px) {
+      padding: 15px;
+    }
+  }
+  label:before {
+    font-family: "fontawesome";
+    font-weight: normal;
+    margin-right: 10px;
+    @media (max-width: 768px) {
+      margin: 0;
+      font-size: $fs-18;
+    }
+  }
+  label[for*="1"]:before {
+    content: "\f099";
+  }
+  label[for*="2"]:before {
+    content: "\f09a";
+  }
+  label[for*="3"]:before {
+    content: "\f16d";
+  }
+  label[for*="4"]:before {
+    content: "\f08c";
+  }
+  label:hover {
+    color: $dark-color;
+    cursor: pointer;
+  }
+  input:checked + label {
+    color: $info-color;
+    border: $br-1 solid $gray-200;
+    border-top: $br-2 solid $danger-color;
+    border-bottom: $br-1 solid $white;
+  }
+  #tab01:checked ~ #content01,
+  #tab02:checked ~ #content02,
+  #tab03:checked ~ #content03,
+  #tab04:checked ~ #content04 {
+    display: block;
+  }
+  .tabOne {
+    &__flex {
+      display: flex;
+      @media (max-width: 767px) {
+        flex-direction: column;
+      }
+      h3 {
+        padding-bottom: 22px;
+      }
+      &--content-one,
+      &--content-two {
+        width: 50%;
+        padding: 20px;
+        @media (max-width: 767px) {
+          width: 100%;
+        }
+      }
+      &--content-two {
+        ul li {
+          padding: 6px 0px;
+          list-style: inside;
+          font-size: $fs-16;
+        }
+      }
+    }
+  }
+  .facebook {
+    h3 {
+      padding-bottom: 22px;
+    }
+    &__flex {
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: space-between;
+      @media (max-width: 767px) {
+        flex-direction: column;
+      }
+      .w-40 {
+        width: 40%;
+        @media (max-width: 767px) {
+          width: 100%;
+        }
+      }
+      .w-60 {
+        width: 60px;
+        @media (max-width: 767px) {
+          width: 100%;
+        }
+      }
+      .cloud {
+        width: 300px;
+        position: relative;
+        transition: 0.8s;
+        animation: animateSlide 1s ease-in-out;
+        transform: translatey(60px);
+        z-index: 1;
+      }
+      .facebook_logo {
+        width: 100px;
+        animation: facebookSlide 0.8s ease-in;
+        transform: translatex(-300px);
+        // right: 30%;
+        position: relative;
+      }
+    }
+  }
+  .video {
+    iframe {
+      width: 100%;
+      height: 500px;
+      @media (max-width: 767px) {
+        height: auto;
+      }
+    }
+  }
+  .image {
+    &__flex {
+      display: flex;
+      @media (max-width: 767px) {
+        flex-direction: column;
+      }
+      &--content-one,
+      &--content-two {
+        padding: 22px;
+      }
+      &--content-one img,
+      &--content-two img {
+        width: 90%;
+      }
+      &--content-one p {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@keyframes animateSlide {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translatey(60px);
+  }
+}
+@keyframes facebookSlide {
+  from {
+    transform: translatex(-170px);
+  }
+  to {
+    transform: translatex(-300px);
+  }
+}

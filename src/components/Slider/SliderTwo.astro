@@ -1,0 +1,27 @@
+---
+import data from "../../data/data.json";
+import banner from "../images/hero-banner.jpg";
+---
+
+<div class="swiperTwo">
+  <div class="swiper mySwiperTwo">
+    <div class="swiper-wrapper mySwiperTwo__wrapper">
+      {
+        data.slice(0, 5).map((slide) => (
+          <div class="swiper-slide mySwiperTwo__slide">
+            <div class="slide__flex">
+              <div class="slide__flex--title">{slide["content-small"]}</div>
+              <div class="slide__flex--desc">{slide["content-extra"]}</div>
+              <button class="btn slide__flex--discover">Discover</button>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    <div class="button-section">
+      <div class="swiper-button-next button-section--next"></div>
+      <div class="swiper-button-prev button-section--prev"></div>
+      <div class="swiper-pagination button-section--pagination"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,119 @@
+---
+import cloud from "../../images/cloud.png";
+import facebook from "../../images/fb.png";
+import art from "../../images/art.jpg";
+import light from "../../images/light.jpg";
+---
+
+<div id="tsum-tabs">
+  <main>
+    <input id="tab01" type="radio" name="tabs" checked />
+    <label for="tab01">Twitter</label>
+
+    <input id="tab02" type="radio" name="tabs" />
+    <label for="tab02">Facebook</label>
+
+    <input id="tab03" type="radio" name="tabs" />
+    <label for="tab03">Instagram</label>
+
+    <input id="tab04" type="radio" name="tabs" />
+    <label for="tab04">Linkedin</label>
+
+    <section id="content01">
+      <div class="tabOne__flex">
+        <div class="tabOne__flex--content-one">
+          <h3>Twitter</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolorem
+            sequi, quo tempore in eum obcaecati atque quibusdam officiis est
+            dolorum minima deleniti ratione molestias numquam. Voluptas
+            voluptates quibusdam cum?Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Ea dolorem sequi, quo tempore in eum obcaecati
+            atque quibusdam officiis est dolorum minima deleniti ratione
+            molestias numquam. Voluptas voluptates quibusdam cum?
+          </p>
+        </div>
+        <div class="tabOne__flex--content-two">
+          <h3>Content</h3>
+
+          <ul>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Lorem ipsum dolor sit amet</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="content02" class="facebook">
+      <div class="facebook__flex">
+        <div class="facebook__flex--content-one w-40">
+          <h3>Facebook</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolorem
+            sequi, quo tempore in eum obcaecati atque quibusdam officiis est
+            dolorum minima deleniti ratione molestias numquam. Voluptas
+            voluptates quibusdam cum?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolorem
+            sequi, quo tempore in eum obcaecati atque quibusdam officiis est
+            dolorum minima deleniti ratione molestias numquam. Voluptas
+            voluptates quibusdam cum?
+          </p>
+        </div>
+        <div class="facebook__flex--content-two">
+          <img src={cloud} alt="cloud" class="cloud" />
+          <img src={facebook} alt="facebook" class="facebook_logo" />
+        </div>
+      </div>
+    </section>
+
+    <section id="content03">
+      <div class="video">
+        <iframe
+          width="420"
+          height="345"
+          src="https://www.youtube.com/embed/rzfSGreEO8g?autoplay=1&mute=1"
+        >
+        </iframe>
+      </div>
+    </section>
+
+    <section id="content04">
+      <div class="image__flex">
+        <div class="image__flex--content-one">
+          <img src={art} alt="art" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolorem
+            sequi, quo tempore in eum obcaecati atque quibusdam officiis est
+            dolorum minima deleniti ratione molestias numquam. Voluptas
+            voluptates quibusdam cum?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolorem
+            sequi, quo tempore in eum obcaecati atque quibusdam officiis est
+            dolorum minima deleniti ratione molestias numquam. Voluptas
+            voluptates quibusdam cum?
+          </p>
+        </div>
+        <div class="image__flex--content-two">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolorem
+            sequi, quo tempore in eum obcaecati atque quibusdam officiis est
+            dolorum minima deleniti ratione molestias numquam. Voluptas
+            voluptates quibusdam cum?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolorem
+            sequi, quo tempore in eum obcaecati atque quibusdam officiis est
+            dolorum minima deleniti ratione molestias numquam. Voluptas
+            voluptates quibusdam cum?
+          </p>
+          <img src={light} alt="art" />
+        </div>
+      </div>
+    </section>
+  </main>
+</div>

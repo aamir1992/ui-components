@@ -1,0 +1,17 @@
+---
+import data from "../../data/data.json";
+---
+
+<div class="swiper-container mySwiperFive">
+  <div class="swiper-wrapper swiperFive">
+    {
+      data
+        .slice(0.8)
+        .map((slide) => (
+          <div class="swiper-slide swiperFive__slide">
+            {slide["content-small"]}
+          </div>
+        ))
+    }
+  </div>
+</div>

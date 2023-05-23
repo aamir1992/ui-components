@@ -1,0 +1,152 @@
+button, .button, a.button {
+    font-size: $fs-14;
+    font-family: $body-font-family;
+    padding: $button-padding;
+    outline: none;
+    box-shadow: none;
+    transition: all .2s ease-in;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    background: none;
+    text-align: center;
+    line-height: 20px;
+    display: inline-block;
+    &.size-lg {
+      min-width: 170px;
+      height: 50px;
+    }
+  
+    &.size-md {
+      min-width: 140px;
+      height: 50px;
+    }
+  
+    &.size-sm {
+      min-width: 122px;
+      height: 50px;
+    }
+  
+    &.primary {
+      background-color: $primary-color;
+      color: $white;
+  
+      &.hoverable {
+        &:hover {
+          background-color: $white;
+          color: $primary-color;
+        }
+      }
+  
+      &.border-1 {
+        border: 1px solid $primary-color;
+      }
+  
+      &:disabled, &[disabled] {
+        opacity: 0.5;
+        cursor: not-allowed;
+  
+        &:hover {
+          background-color: $primary-color;
+          color: $white;
+        }
+      }
+  
+      &.outlined {
+        background-color: transparent;
+        color: $primary-color;
+  
+        &.hoverable {
+          &:hover {
+            background-color: $primary-color;
+            color: $white;
+          }
+        }
+      }
+    }
+  
+    &.secondary {
+      background-color: $secondary-color;
+      color: $white;
+  
+      &.hoverable {
+        &:hover {
+          background-color: $white;
+          color: $secondary-color;
+        }
+      }
+  
+      &.outlined {
+        background-color: $white;
+        color: $secondary-color;
+  
+        &.hoverable {
+          &:hover {
+            background-color: $secondary-color;
+            color: $white;
+          }
+        }
+      }
+  
+      &.border-1 {
+        border: 1px solid $secondary-color;
+      }
+  
+      &:disabled, &[disabled] {
+        opacity: 0.5;
+        cursor: not-allowed;
+  
+        &:hover {
+          background-color: $secondary-color;
+          color: $white;
+        }
+      }
+    }
+  
+    &.tertiary {
+      background-color: $tertiary-color;
+      color: $black;
+  
+      &.hoverable {
+        &:hover {
+          background-color: $white;
+          color: $tertiary-color;
+        }
+      }
+  
+      &.outlined {
+        background-color: $white;
+        color: $tertiary-color;
+  
+        &.hoverable {
+          &:hover {
+            background-color: $tertiary-color;
+            color: $black;
+          }
+        }
+      }
+  
+      &.border-1 {
+        border: 1px solid $tertiary-color;
+      }
+  
+      &:disabled, &[disabled] {
+        opacity: 0.5;
+        cursor: not-allowed;
+  
+        &:hover {
+          background-color: $tertiary-color;
+          color: $black;
+        }
+      }
+    }
+  
+    &.rounded {
+      border-radius: 5px;
+    }
+    
+  }
+
+
+.letter-hover:hover {
+    letter-spacing: 2px;
+}

@@ -1,0 +1,162 @@
+.footersix {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 72px 0px 0px;
+    background-color: $primary-color;
+    &__logo,
+    &__seccol,
+    &__thirdcol {
+        p {
+            color: $white;
+            font-size: $fs-20;
+            &.content {
+                line-height: 2.0;
+                margin-bottom: $space-30;
+                text-align: justify;
+            }
+        }
+        ul {
+            li {
+                a {
+                    color: $white;
+                    font-size: $fs-16;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+    }
+    &__logo {
+        width: 175px;
+        height: 175px;
+        @include mq("desktop") {
+            margin: 0 auto;
+            height: auto;
+            margin-bottom: $space-30;
+        }
+        @include mq("tablet-wide") {
+            img {
+           width: 80%;
+            }
+        }
+    }
+    &__thirdcol {
+        max-width: 420px;
+        position: relative;
+        margin: 0 0 0 auto;
+        .download {
+            font-weight: 500;
+            color: $white;
+            text-decoration: underline;
+            font-size: var(--fs-18);
+            position: absolute;
+            bottom: 0px;
+            right: 20px;
+            @include mq("phone") {
+                right: 25%;
+            }
+            @include mq("phone") {
+                width: 100%;
+                right:0;
+            }
+            padding: $space-15 0px $space-15 $space-30;
+
+            &::after {
+                background-image: url('../images/downloadbro.png');
+                position: absolute;
+                content: '';
+                background-size: contain;
+                height: 18px;
+                width: 14px;
+                background-repeat: no-repeat;
+                transform: translate(50%, -50%);
+                top: 55%;
+                left: 0px;
+            }
+        }
+    }
+
+    &__copyright {
+        display: flex;
+        justify-content: space-between;
+        padding: $space-30 0;
+        align-items: center;
+
+        p {
+            color: $white;
+            font-size: $fs-16;
+            line-height: $fs-24;
+        }
+
+        .social {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            li {
+                line-height: 1;
+                a {
+                    color: $white;
+                    font-size: $fs-16;
+                }
+                &:not(:last-child) {
+                    margin-right: $space-10;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 990px) {
+    .footersix {
+        &__link {
+            .social {
+                display: flex;
+                justify-content: center !important;
+            }
+        }
+        &__seccol {
+            li {
+                &:not(:last-child) {
+                    border-bottom: 1px solid $white;
+                }
+            }
+        }
+        &__thirdcol {
+            max-width: 100%;
+            margin: $space-25 0 $space-15;
+            
+            img {
+                width: 100%;
+            }
+        }
+        &__copyright {
+            display: flex;
+            flex-direction: column-reverse;
+            padding: 0px;
+            p {
+                text-align: left !important;
+                margin-bottom: $space-15;
+                font-size: $fs-12;
+            }
+            .social {
+                display: flex;
+                justify-content: start;
+                margin-bottom: $space-25;
+                border-bottom: 1px solid $white;
+                margin-top: $space-15;
+                li {
+                    padding-bottom: $space-25;
+                    &:not(:last-child) {
+                         margin-right: $space-25;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+

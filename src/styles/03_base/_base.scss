@@ -1,0 +1,250 @@
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  /* display: block; */
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+body.fixed, html.fixed {
+  overflow: hidden;
+}
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  font-size: 16px;
+}
+
+html,
+body {
+  text-rendering: optimizeSpeed;
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: $body-font-family;
+  background-color: $white;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* scroll-snap-type: x proximity;
+  scroll-snap-type: y proximity; */
+  &.hide-overflow {
+    overflow: hidden;
+  }
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+ /*  @include mq("desktop-wide") {
+    max-width: 1180px;
+  }
+  @include mq("tablet-wide") {
+    width: 93%;
+  } */
+}
+
+section {
+  scroll-snap-align: start;
+}
+
+div {
+  scroll-snap-type: y mandatory;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+  @include on-event {
+    color: $black;
+    text-decoration: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: $paragraph;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  /* object-fit: cover; */
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.border-none {
+  border: none !important;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left !important;
+}
+.text-right {
+  text-align: right;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.mr-18 {
+  margin-right: 18px;
+}
+
+.mt-25 {
+  margin-top: 25px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: $h1;
+  
+}
+h2 {
+  font-size: $h2;
+  
+}
+h3 {
+  font-size: $h3;
+  
+}
+h4 {
+  font-size: $h4;
+  
+}
+h5 {
+  font-size: $h5;
+  
+}
+h6 {
+  font-size: $h6;
+  
+}
+
+@media (max-width: 1024px) {
+  .panels {
+      width: 200vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .panels {
+      width: 235vw;
+  }
+}
+
+
+@keyframes fadeInUp {
+  0% { 
+    opacity: 0;
+    transform: translate3d(0,40px,0) 
+  }
+  100% { 
+    opacity: 1; 
+    transform: translate3d(0,0,0);
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}

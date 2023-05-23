@@ -1,0 +1,325 @@
+.accordion { 
+  margin: 30px 0;
+  &--1 {
+    .accordion {
+      &__item {
+        &:not(:last-child){
+          margin-bottom: 20px;
+        }
+        &--title{
+          font-size: $fs-18;
+          font-weight: $fw-500;
+          color: $gray-700;
+          position: relative;
+          cursor: pointer;
+          padding-left: 25px;
+          &:hover{
+            color: $primary-color;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            transition: 0.4s all ease-in-out;
+            top: 4px;
+            left: 0px;
+            width: 14px;
+            height: 14px;
+            background-size: contain;
+            background-image: url(../images/down-arrow.png);
+            background-repeat: no-repeat;
+        }
+        }
+        &--content {
+          max-height: 0;
+          overflow: hidden;
+          transition: all 0.3s ease;
+          margin: 0;
+          color: $gray-700;
+          padding-left: 25px;
+        }
+        &.open{
+          .accordion__item--title{
+            color: $primary-color;
+            &::after{
+              transform: rotate(180deg) translateY(-3px);
+            }
+          }
+          .accordion__item--content{
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+  &--2 {
+    width: 100%;
+    background: $white-500;
+    text-align: left;
+    padding: 0 20px 0 20px;
+  }
+
+  &__heading {
+    font-size: $fs-18;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+  }
+  &__trigger {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: $body-font-family;
+    font-size: $fs-24;
+    font-weight: $fw-500;
+    padding: 25px 40px 25px 10px;
+    color: $black;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: 0 none;
+    border-bottom: 1px solid $black;
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    position: relative;
+
+    @media (max-width: $medium-screen) {
+      font-size: $fs-16;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 28px;
+      top: calc(50% - 8px);
+      width: 2px;
+      height: 15px;
+      background-color: $black;
+      transform: rotate(0deg);
+      transform-origin: center;
+      transition: transform 0.5s;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      right: 22px;
+      top: calc(50% - 2px);
+      width: 15px;
+      height: 2px;
+      background-color: $black;
+      transform: rotate(0deg);
+      transform-origin: center;
+      transition: transform 0.5s;
+    }
+  }
+  &__trigger[aria-expanded="true"] {
+    &::after {
+      transform: rotate(90deg);
+    }
+    &::before {
+      content: none;
+    }
+  }
+  &__copy {
+    overflow: hidden;
+    padding: 0 1.5rem 0 1.5rem;
+    color: $black;
+    line-height: 1.6;
+    font-size: $fs-16;
+    font-weight: $fw-500;
+    max-height: 0;
+    visibility: hidden;
+    box-sizing: unset;
+    transition: visibility 0.5s, padding 0.5s, max-height 0.5s;
+
+    &--open {
+      visibility: visible;
+      border-bottom: 1px solid $black; 
+    }
+    &__pic {
+      width: 180px;
+      height: auto;
+
+      @media (max-width: $medium-screen) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__item {
+    &:last-child {
+      .accordion__trigger {
+        border-bottom: 0;
+      }
+      .accordion__copy {
+        border-bottom: 0;
+      }
+    }
+  }
+
+}
+
+
+.accordionTypeThree {
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 500px;
+    overflow: hidden;
+    list-style-type: none;
+    font-family: $body-font-family;
+
+    @media (max-width: $medium-screen) {
+      display: block;
+      height: 100%;
+    }
+  }
+  
+  li {
+    /* flex: 1; */
+    display: flex;
+    align-items: stretch;
+    padding: 0px;
+    cursor: pointer;
+    transition: all .5s ease;
+    border-right: 1px solid $black;
+    
+    &:last-child {
+      border-right: 0;
+    }
+
+    @media (max-width: $medium-screen) {
+      display: block;
+      border-right: 0;
+      border-bottom: 1px solid $black;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+    
+    &.active {
+      flex: 5;
+      /* background: $white-500; */
+      cursor: default;
+      
+      h2 {
+        color: $white;
+      }
+      
+      .section-content {
+        flex: 4;
+        color: $black;
+        display: block;
+      }
+
+      .section-title {
+        background-color: $secondary-color;
+        &::before {
+          content: "";
+          position: absolute;
+          background-image: url(../images/minus-circle-white.png);
+          background-size: cover;
+          background-repeat: no-repeat;
+          right: calc(50% - 12px);
+          top: 4%;
+          width: 24px;
+          height: 24px;
+          transform-origin: center;
+          transition: transform 0.5s;
+
+          @media (max-width: $medium-screen) {
+            right: 4%;
+            top: calc(50% - 13px);
+          }
+        }
+      }
+    }
+    
+    .section-title {
+      /* flex: 1; */
+      display: flex;
+      align-items: flex-end;
+      margin: 0;
+      padding: 50px 10px 15px 10px;
+      text-align: center;
+      color: $black;
+      position: relative;
+      width: 72px;
+
+      @media (max-width: $medium-screen) {
+        width: 100%;
+        height: 72px;
+        padding: 10px 15px 10px 15px;
+        align-items: center;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url(../images/plus-circle-black.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        right: calc(50% - 12px);
+        top: 4%;
+        width: 24px;
+        height: 24px;
+        transform-origin: center;
+        transition: transform 0.5s;
+
+        @media (max-width: $medium-screen) {
+          right: 4%;
+          top: calc(50% - 13px);
+        }
+      }
+      
+      h2 {
+        margin: 0;
+        transform: rotate(180deg);
+        width: 100%;
+        text-align: left;
+        font-size: $fs-24;
+        font-weight: $fw-500;
+        writing-mode: vertical-rl;
+        display: flex;
+        align-items: center;    
+
+        @media (max-width: $medium-screen) {
+          font-size: $fs-16;
+          transform: rotate(0deg);
+          writing-mode: unset;
+        }
+      }
+    }
+    
+    .section-content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 15px 15px 15px 15px;
+      visibility: hidden;
+      display: none;
+      font-size: $fs-16;
+      font-weight: $fw-500;
+
+      &.visible {
+        visibility: visible;
+        animation: fadeInUp .5s linear;
+      }
+
+      @media (max-width: $medium-screen) {
+        font-size: $fs-14;
+      }
+
+      p {
+        line-height: 1.6;
+      }
+
+      .horizontalAccordionImg {
+        width: 200px;
+      }
+    }
+  }
+}

@@ -1,0 +1,352 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../layouts/Footer.astro";
+// import Banner from "../components/Banner.astro";
+import Grid from "../images/grid.png";
+---
+
+<Layout title="Home">
+  <main class="container">
+    <h2 class="styleGuildTitle">Style Guide</h2>
+    <section class="styleGuideWrapper">
+      <!-- Grid -->
+      <div class="styleGuideCardGrid">
+        <div class="container">
+          <div class="brand">Grid</div>
+          <div class="row">
+            <div class="col-4">
+              <div class="brand text-left">Layout Information</div>
+              <div class="row mb-10">
+                <div class="col-5">Width</div>
+                <div class="col-7">: 1920px</div>
+              </div>
+              <div class="row mb-10">
+                <div class="col-5">Grid Width</div>
+                <div class="col-7">: 1440px</div>
+              </div>
+              <div class="row mb-10">
+                <div class="col-5">Column</div>
+                <div class="col-7">: 12</div>
+              </div>
+              <div class="row mb-10">
+                <div class="col-5">Column Width</div>
+                <div class="col-7">: 88px</div>
+              </div>
+              <div class="row mb-10">
+                <div class="col-5">Gutter Width</div>
+                <div class="col-7">: 32px</div>
+              </div>
+            </div>
+            <div class="col-8"><img src={Grid} alt="grid" /></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Color Palette -->
+      <div class="styleGuideCard">
+        <div class="brand">Gray Scale</div>
+        <div class="grayScale">
+          <div class="grayScale__box">
+            <div class="grayScale__box--1"></div>
+            <p>White</p>
+          </div>
+          <div class="grayScale__box">
+            <div class="grayScale__box--2"></div>
+            <p>Gray-100</p>
+          </div>
+          <div class="grayScale__box">
+            <div class="grayScale__box--3"></div>
+            <p>Gray-200</p>
+          </div>
+          <div class="grayScale__box">
+            <div class="grayScale__box--4"></div>
+            <p>Gray-300</p>
+          </div>
+          <div class="grayScale__box">
+            <div class="grayScale__box--5"></div>
+            <p>Gray-400</p>
+          </div>
+          <div class="grayScale__box">
+            <div class="grayScale__box--6"></div>
+            <p>Gray-500</p>
+          </div>
+          <div class="grayScale__box">
+            <div class="grayScale__box--7"></div>
+            <p>Gray-600</p>
+          </div>
+          <div class="grayScale__box">
+            <div class="grayScale__box--8"></div>
+            <p>Gray-700</p>
+          </div>
+          <div class="grayScale__box">
+            <div class="grayScale__box--9"></div>
+            <p>Gray-800</p>
+          </div>
+          <div class="grayScale__box">
+            <div class="grayScale__box--10"></div>
+            <p>Black</p>
+          </div>
+        </div>
+
+        <div class="brand">Brand</div>
+        <div class="roundedPalette">
+          <div class="circle circle--1"></div>
+          <div class="circle circle--2"></div>
+          <div class="circle circle--3"></div>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="styleGuideCard">
+        <div class="brand">Buttons</div>
+        <div class="buttonWrapper">
+          <button
+            class="button mr-18 outlined letter-hover border-1 size-sm mb-10"
+            title="Button">Small</button
+          >
+          <button
+            class="button mr-18 primary hoverable border-1 size-md mb-10"
+            title="Button">Medium</button
+          >
+          <button
+            class="button mr-18 rounded primary letter-hover border-1 size-lg mb-10"
+            title="Button">Large</button
+          >
+          <!--           
+          <button class="button mr-18 secondary letter-hover rounded border-1 size-sm mb-10"
+            >Small</button
+          > -->
+          <!-- <button
+            class="button secondary rounded hoverable size-md border-1 mb-10"
+            >Medium</button
+          >
+          <button
+            class="button outlined secondary rounded size-lg hoverable border-1 mb-10"
+            >Large</button
+          > -->
+          <button class="button mr-18 tertiary border-1 mb-10" disabled
+            >Large</button
+          >
+        </div>
+      </div>
+
+      <!-- Lists -->
+      <div class="styleGuideCard">
+        <div class="brand">Ordered List</div>
+        <ol>
+          <li>This is a test item&nbsp;<strong>Testing123</strong></li>
+          <li>
+            This is a test item&nbsp;
+            <strong>Testing123</strong>
+          </li>
+          <li>This is a test item&nbsp;<strong>Testing123</strong></li>
+          <li>This is a test item&nbsp;<strong>Testing123</strong></li>
+          <li>This is a test item&nbsp;<strong>Testing123</strong></li>
+        </ol>
+
+        <div class="brand">Unordered List</div>
+        <ul class="tick">
+          <li>This is a test item&nbsp;<strong>Testing123</strong></li>
+          <li>This is a test item&nbsp;<strong>Testing123</strong></li>
+          <li>This is a test item&nbsp;<strong>Testing123</strong></li>
+          <li>This is a test item&nbsp;<strong>Testing123</strong></li>
+          <li>This is a test item&nbsp;<strong>Testing123</strong></li>
+        </ul>
+
+        <div class="brand">Unordered List 2</div>
+        <ul class="dot">
+          <li>This is a test item&nbsp;<strong>Testing123</strong></li>
+          <li>This is a test item&nbsp;<strong>Testing123</strong></li>
+          <li>This is a test item&nbsp;<strong>Testing123</strong></li>
+          <li>This is a test item&nbsp;<strong>Testing123</strong></li>
+          <li>This is a test item&nbsp;<strong>Testing123</strong></li>
+        </ul>
+      </div>
+
+      <!-- Typography -->
+      <div class="styleGuideCard typo">
+        <div class="brand">Typography & Table</div>
+        <div class="typo-guide">
+          <table>
+            <thead>
+              <tr>
+                <th><h5>Element</h5></th>
+                <!-- <th><h5>Size</h5></th> -->
+                <th><h5>Text</h5></th>
+              </tr>
+            </thead>
+            <tr>
+              <td><h4>h1</h4></td>
+              <!-- <td><h4>32px</h4></td> -->
+              <td><h1>The quick brown fox jumping over the lazy dog.</h1></td>
+            </tr>
+            <tr>
+              <td><h4>h2</h4></td>
+              <!-- <td><h4>24px</h4></td> -->
+              <td><h2>The quick brown fox jumping over the lazy dog.</h2></td>
+            </tr>
+            <tr>
+              <td><h4>h3</h4></td>
+              <!-- <td><h4>18.72px</h4></td> -->
+              <td><h3>The quick brown fox jumping over the lazy dog.</h3></td>
+            </tr>
+            <tr>
+              <td><h4>h4</h4></td>
+              <!-- <td><h4>16px</h4></td> -->
+              <td><h4>The quick brown fox jumping over the lazy dog.</h4></td>
+            </tr>
+            <tr>
+              <td><h4>h5</h4></td>
+              <!-- <td><h4>13.28px</h4></td> -->
+              <td><h5>The quick brown fox jumping over the lazy dog.</h5></td>
+            </tr>
+            <tr>
+              <td><h4>h6</h4></td>
+              <!-- <td><h4>10.72px</h4></td> -->
+              <td><h6>The quick brown fox jumping over the lazy dog.</h6></td>
+            </tr>
+            <tr>
+              <td><h4>p</h4></td>
+              <!-- <td><h4>16px</h4></td> -->
+              <td><p>The quick brown fox jumping over the lazy dog.</p></td>
+            </tr>
+            <tr>
+              <td><h4>body</h4></td>
+              <!-- <td><h4>16px</h4></td> -->
+              <td><p>The quick brown fox jumping over the lazy dog.</p></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="styleGuideCard">
+        <div class="brand">Pagination</div>
+        <nav aria-label="Page navigation">
+          <ul class="pagination center">
+            <li class="page-item"><a class="page-link" href="#">« Prev</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item active">
+              <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next »</a></li>
+          </ul>
+        </nav>
+        <ul class="pager">
+          <li class="previous">
+            <a href="#">« Prev</a>
+          </li>
+          <li class="next">
+            <a href="#">Next »</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="styleGuideCard">
+        <div class="brand">Table</div>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="styleGuideCard">
+        <div class="brand">Basic Form</div>
+        <form>
+          <div class="form-group">
+            <label for="input">Input<span>*</span></label>
+            <input type="text" name="input" placeholder="input" />
+            <span>This is a error message</span>
+          </div>
+          <div class="form-group">
+            <label for="select">Select<span>*</span></label>
+            <select id="" name="select">
+              <option value="none" selected="" disabled="">Option</option>
+              <option value="Option1">Option1</option>
+              <option value="Option2">Option2</option>
+              <option value="Option3">Option3</option>
+              <option value="Option4">Option4</option>
+              <option value="Option5">Option5</option>
+            </select>
+            <span>Required field</span>
+          </div>
+          <div class="form-group">
+            <label for="textarea">Textarea</label>
+            <textarea
+              id=""
+              rows="5"
+              class=""
+              name="textarea"
+              placeholder="Textarea"></textarea>
+          </div>
+
+          <div class="form-group">
+            <div class="checkbox custom-form-select">
+              <label>
+                <input type="checkbox" checked />
+                Item 1
+              </label>
+            </div>
+            <div class="checkbox custom-form-select">
+              <label>
+                <input type="checkbox" />
+                Item 2
+              </label>
+            </div>
+          </div>
+          <br />
+
+          <div class="form-group">
+            <div class="radio custom-form-select">
+              <label>
+                <input type="radio" checked name="foo" />
+                Item 1
+              </label>
+            </div>
+            <div class="radio custom-form-select">
+              <label>
+                <input type="radio" name="foo" />
+                Item 2
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group text-right">
+            <button class="button primary border-1 size-sm mb-10">Submit</button
+            >
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <!-- <Footer /> -->
+</Layout>

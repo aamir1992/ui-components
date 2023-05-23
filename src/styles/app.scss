@@ -1,0 +1,40 @@
+// @charset "UTF-8";
+
+// 1. Configuration and helpers
+@import "01_abstracts/variables", "01_abstracts/functions",
+  "01_abstracts/mixins";
+
+// 2. Vendors
+@import "02_vendors/bootstrap", "02_vendors/normalize";
+
+// 3. Base stuff
+@import "03_base/base", "03_base/typography", "03_base/helpers";
+
+// 4. Layout-related sections
+@import "04_layout/header", "04_layout/footer", "04_layout/section",
+  "04_layout/header/search", "04_layout/header/search-block",
+  "04_layout/header/header-type-one", "04_layout/header/header-type-two",
+  "04_layout/footer/footerone", "04_layout/footer/footertwo",
+  "04_layout/footer/footerthree", "04_layout/footer/footerfour",
+  "04_layout/footer/footerfive", "04_layout/footer/footersix";
+
+// 5. Components
+@import "05_components/button", "05_components/accordion.scss",
+  "05_components/banner", "05_components/breadcrumb",
+  "05_components/style-guide", "05_components/list", "05_components/pagination",
+  "05_components/table", "05_components/form", "05_components/componentui",
+  "05_components/card/card", "05_components/scroll-top",
+  "05_components/slider/slider", "05_components/slider/sliderTwo",
+  "05_components/slider/sliderBanner", "05_components/slider/sliderThree",
+  "05_components/slider/sliderFour", "05_components/slider/sliderFive",
+  "05_components/slider/sliderSix", "05_components/slider/sliderSeven",
+  "05_components/slider/sliderEight", "05_components/tab/tabOne",
+  "05_components/tab/tabTwo", "05_components/tab/tabThree",
+  "05_components/tab/tabFour", "05_components/content-type",
+  "05_components/loader/loader-type-one";
+
+// 6. Page-specific styles
+@import "06_pages/home", "06_pages/404", "06_pages/homeCard";
+
+// 7. Themes
+@import "07_themes/default", "07_themes/slick.scss";

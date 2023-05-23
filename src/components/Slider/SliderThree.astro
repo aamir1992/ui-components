@@ -1,0 +1,33 @@
+---
+import data from "../../data/data.json";
+---
+
+<div class="swiperThree">
+  <div class="swiperThree__flex container">
+    <div class="swiper-left w-30">
+      <h2>What's New</h2>
+    </div>
+    <div class="swiper mySwiperThree w-70">
+      <div class="swiper-wrapper swiperThree__wrapper">
+        {
+          data.slice(0, 5).map((slide) => (
+            <div class="swiper-slide mySwiperSlider__slide">
+              <div class="mySwiperSlider__slide--title">
+                {slide["content-small"]}
+              </div>
+              <div class="mySwiperSlider__slide--desc">
+                {slide["content-extra"]}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+      <div class="buttonThree__section">
+        <div class="swiper-button-next buttonThree__section--next"></div>
+        <div class="swiper-button-prev buttonThree__section--prev"></div>
+        <!-- <div class="swiper-button-next "></div>
+        <div class="swiper-button-prev "></div> -->
+      </div>
+    </div>
+  </div>
+</div>

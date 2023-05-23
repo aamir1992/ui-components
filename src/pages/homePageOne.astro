@@ -1,0 +1,91 @@
+---
+import data from "../data/card";
+import Layout from "../layouts/Layout.astro";
+import SliderTwo from "../components/Slider/SliderTwo.astro";
+import Footerfive from "../components/Footer/Footerfive.astro";
+import Content2 from "../components/content-types/Content--2.astro";
+import Content1 from "../components/content-types/Content--1.astro";
+import SliderSeven from "../components/Slider/SliderSeven.astro";
+import HeaderTypeOne from "../components/Header/HeaderTypeOne.astro";import ScrollTop from "../components/ScrollTop/ScrollTop.astro";
+import LoaderTypeOne from "../components/PageLoader/LoaderTypeOne.astro";
+
+---
+
+<Layout title="Home">
+  <HeaderTypeOne />
+  <LoaderTypeOne/>
+  <main class="page-main">
+    <SliderTwo />
+    <Content2 />
+    <section>
+      <div class="container">
+        <!-- Card Type 1 -->
+        <div class="row">
+          {
+          data.slice(0, 3).map((input, index) => {
+          return (
+          <div class="col-sm-4">
+            <div class="card card--1" style=`background-image: url("${input.img}");`>
+              <div class="card__content">
+                <h3>{input.title}</h3>
+                <p>{input.description}</p>
+                <a href="#" class="readmore">
+                  Readmore
+                </a>
+              </div>
+            </div>
+          </div>
+          );
+          })
+          }
+        </div>
+        <!--  -->
+      </div>
+    </section>
+    <SliderSeven />
+    <section class="section--mar">
+      <div class="container">
+        <div class="col">
+          <div class="col__content text-center">
+            <h2 class="section__title">Lorem ipsum dolor sit amet</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aliquid natus odit commodi, fugit
+              maxime! Blanditiis, debitis porro natus similique exercitationem iste alias at accusantium.
+              Blanditiis tempore labore et, sint explicabo voluptas sequi laboriosam ipsa illum perspiciatis,
+              dicta ex minus aspernatur maiores quidem provident enim minima eaque! Provident, expedita error.
+            </p>
+          </div>
+        </div>
+        <!-- Card Type 5 -->
+        <div class="row mb-60">
+          {
+          data.slice(0, 3).map((input, index) => {
+          return (
+          <div class="col-sm-4">
+            <div class="card card--5">
+              <div class="card__head">
+                <div class="card__head--profileimg card--circlewrap">
+                  <img src={input.userimg} alt="">
+                </div>
+                <div class="card__head--profiledetail">
+                  <h3>{input.subtitle}</h3>
+                  <p>{input.userdesignation}</p>
+                </div>
+              </div>
+              <div class="card__content">
+                <p>"{input.description}"</p>
+              </div>
+            </div>
+          </div>
+          );
+          })
+          }
+        </div>
+        <!--  -->
+      </div>
+    </section>
+    <Content1 />
+    <Footerfive />
+    <ScrollTop />
+  </main>
+</Layout>
