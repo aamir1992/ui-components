@@ -23,14 +23,14 @@ export default defineConfig({
     build: {
       rollupOptions: {
         output: {
-          entryFileNames: "assets/js/main.js",
+          entryFileNames: "../assets/js/main.js",
           chunkFileNames: "chunks/chunk.[hash].js",
           assetFileNames: ({ name }) => {
             if (/\.(gif|jpe?g|png|svg|mp4)$/.test(name ?? "")) {
-              return "assets/images/[name][extname]";
+              return "../assets/images/[name][extname]";
             }
             if (/\.css$/.test(name ?? "")) {
-              return "assets/css/styles[extname]";
+              return "../assets/css/styles[extname]";
             }
             return "assets/[name][extname]";
           },
