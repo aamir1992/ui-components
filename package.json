@@ -14,6 +14,7 @@
     "@astrojs/netlify": "^1.2.0",
     "@astrojs/react": "^1.2.1",
     "@astrojs/sitemap": "^1.0.0",
+    "@astrojs/vercel": "^3.4.0",
     "astro": "^2.1.4",
     "astro-compress": "^1.0.12",
     "astro-imagetools": "^0.8.1",
