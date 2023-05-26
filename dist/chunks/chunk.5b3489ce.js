@@ -1,0 +1,1 @@
+const o=document.querySelector(".scrollTop"),e=()=>{window.addEventListener("scroll",()=>{window.scrollY>100?o.style.display="block":o.style.display="none"})},t=()=>{o&&o.addEventListener("click",l=>{l.preventDefault(),window.scroll({top:0,behavior:"smooth"})})};e();t();
